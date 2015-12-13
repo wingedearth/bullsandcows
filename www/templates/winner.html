@@ -11,15 +11,15 @@
       <!-- TODO: Display the number of tries instead of the 'X' -->
       <div class="item item-text-wrap text-center">
         Congrats!<br><br>
-        You broke the code in X tries!
+        You broke the code in {{turns.length}} tries!
       </div>
 
     </div>
     <div class="padding">
 
       <!-- TODO: Write the code so that when clicked, we play again...  -->
-      <button class="button button-block button-calm">Play Again!</button>
-    
+      <button class="button button-block button-calm" ng-click="playAgain()">Play Again!</button>
+
     </div>
   </ion-content>
 </ion-modal-view>

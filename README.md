@@ -45,10 +45,10 @@ variants; it is often included in telephones and PDAs.
 [x] 3. sel-icon
 [x] 4. init-turn
 [x] 5. display-turn
-[ ] 6. pick
-[ ] 7. score
-[ ] 8. winner-dialog
-[ ] 9. next-turn-refactor
+[x] 6. pick
+[x] 7. score
+[x] 8. winner-dialog
+[x] 9. next-turn-refactor
 
 
 
