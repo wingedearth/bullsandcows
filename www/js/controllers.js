@@ -30,11 +30,9 @@ angular.module('app.controllers', [])
 
   // Initialize game state
   $scope.newGame = function() {
-    solution = newCode();
-    $scope.turns = [];
-
-    // implement a function to run each turn.
-    //nextTurn();
+    solution = newCode(); // generates a new solution code
+    $scope.turns = [];    // resets the turns taken
+    nextTurn();           // starts the first turn
   };
 
 
@@ -66,6 +64,25 @@ angular.module('app.controllers', [])
     $scope.winModal.hide();
   };
 
+  // Constructor for a Turn object. Each round will be a new Turn,
+  // to be stored in the "turns" array.
+  function Turn() {
+    this.positions = [];
+
+    // Reset all positions to null (i.e. no player selections yet.)
+    for (var i = 0; i < $scope.numPositions; i++) {
+      this.positions.push(null);
+    }
+
+    // Reset round score each round.
+    this.bull   = 0; // zero correct icons in correct positions.
+    this.cow    = 0; // zero correct icons in wrong positions.
+  }
+
+  function nextTurn() {
+    $scope.turns.push(new Turn());
+    $scope.currentTurn = $scope.turns[$scope.turns.length - 1];
+  }
 
   function newCode() {
     var secretcode = [];
