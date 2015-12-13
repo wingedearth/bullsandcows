@@ -36,7 +36,6 @@ variants; it is often included in telephones and PDAs.
 - Gulp
 - Git
 - Github
-- SASS
 
 ##Tasks:
 
