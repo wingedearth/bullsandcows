@@ -4,7 +4,7 @@ angular.module('app.controllers', [])
 .controller('AppCtrl', function($scope, $ionicModal) {
 
   // These icon classes are for mapping the selected guesses to the UI
-  $scope.icons = ['ion-social-apple', 'ion-social-android','ion-social-angular','ion-social-html5'];
+  $scope.icons = ['ion-umbrella', 'ion-flash','ion-coffee','ion-headphone'];
 
   // The current selected icon to assign to any clicked position.
   // TODO: Needs to be set when buttons in menu.html are clicked.
