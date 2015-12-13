@@ -42,7 +42,7 @@ variants; it is often included in telephones and PDAs.
 
 [x] 1. starter-code
 [ ] 2. gen-secret-code
-[ ] 3. sel-icon
+[x] 3. sel-icon
 [ ] 4. init-turn
 [ ] 5. display-turn
 [ ] 6. pick

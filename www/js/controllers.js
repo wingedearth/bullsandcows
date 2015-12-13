@@ -1,4 +1,5 @@
-angular.module('starter.controllers', [])
+//define controllers
+angular.module('app.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal) {
 
@@ -18,7 +19,7 @@ angular.module('starter.controllers', [])
   // Run newGame() upon loading
   $scope.newGame();
 
-  /* 
+  /*
   TODO: Call this function when the user clicks a 'score' button.
         The 'score' button should remain disabled until all positions have a value.
         Maybe a button with an icon of a checkmark would be a good UI choice? Or,

@@ -1,11 +1,7 @@
-// Ionic Starter App
+// Define angular module and add dependencies
+angular.module('app', ['ionic', 'app.controllers'])
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
-
+// Wrap the application in Ionic's platform
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -18,6 +14,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
+// designate two states and provide url routing
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
