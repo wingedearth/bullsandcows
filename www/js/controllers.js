@@ -79,6 +79,12 @@ angular.module('app.controllers', [])
     this.cow    = 0; // zero correct icons in wrong positions.
   }
 
+  // Returns bogus array for ng-repeat to loop through a number of times.
+  // Used to provide an array with a size equal to $scope.numPostions
+  $scope.range = function(size) {
+    return new Array(size);
+  };
+
   function nextTurn() {
     $scope.turns.push(new Turn());
     $scope.currentTurn = $scope.turns[$scope.turns.length - 1];

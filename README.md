@@ -44,7 +44,7 @@ variants; it is often included in telephones and PDAs.
 [x] 2. gen-secret-code
 [x] 3. sel-icon
 [x] 4. init-turn
-[ ] 5. display-turn
+[x] 5. display-turn
 [ ] 6. pick
 [ ] 7. score
 [ ] 8. winner-dialog
