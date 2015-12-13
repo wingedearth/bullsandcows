@@ -41,7 +41,7 @@ variants; it is often included in telephones and PDAs.
 ##Tasks:
 
 [x] 1. starter-code
-[ ] 2. gen-secret-code
+[x] 2. gen-secret-code
 [x] 3. sel-icon
 [ ] 4. init-turn
 [ ] 5. display-turn

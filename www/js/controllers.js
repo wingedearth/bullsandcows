@@ -4,20 +4,40 @@ angular.module('app.controllers', [])
 .controller('AppCtrl', function($scope, $ionicModal) {
 
   // These icon classes are for mapping the selected guesses to the UI
-  $scope.icons = ['ion-umbrella', 'ion-flash','ion-coffee','ion-headphone'];
+  $scope.icons =
+    [
+      'ion-umbrella', // icon 0
+      'ion-flash',    // icon 1
+      'ion-coffee',   // icon 2
+      'ion-headphone' // icon 3
+    ];
 
-  // The current selected icon to assign to any clicked position.
-  // TODO: Needs to be set when buttons in menu.html are clicked.
+  // For player guesses, the defaultIcon appears in each space which
+  // a player has not yet entered a value for.
+  $scope.defaultIcon = 'ion-minus';
+
+  // selectedIcon's value determines which icon is selected. Default is
+  // the first icon. Selection may be changed using logic in: menu.html
   $scope.selectedIcon = 0;
+
+  // The default game includes four icons with four positions.
+  $scope.numPositions = 4;
+  $scope.numIcons = $scope.icons.length;
+
+  // "solution" is the secret code that the player is attempting to
+  // to guess. A new solution is set at the start of each game.
+  var solution;
 
   // Initialize game state
   $scope.newGame = function() {
-    // TODO: Set all data properties/structures to their beginning state
+    solution = newCode();
+    $scope.turns = [];
 
+    // implement a function to run each turn.
+    //nextTurn();
   };
 
-  // Run newGame() upon loading
-  $scope.newGame();
+
 
   /*
   TODO: Call this function when the user clicks a 'score' button.
@@ -45,6 +65,19 @@ angular.module('app.controllers', [])
     $scope.newGame();
     $scope.winModal.hide();
   };
+
+
+  function newCode() {
+    var secretcode = [];
+    for (var i = 0; i < $scope.numPositions; i++) {
+      secretcode.push(Math.floor(Math.random() * $scope.icons.length));
+    }
+    return secretcode;
+  }
+
+  // The function to start a new game is run by default.
+  $scope.newGame();
+  console.log(solution);
 
 });
 
